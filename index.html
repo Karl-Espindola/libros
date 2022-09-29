@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="contenedor-login">
+        <form action="">
+            <label for="usu" >Usuario</label>
+            <input type="text" id="usu" placeholder="Usuario">
+            <label for="contra">Contraseña</label>
+            <input type="password" id="contra" placeholder="Contraseña">
+            <div id="error"></div>
+            <button id="ingresar">Ingresar</button>
+            <div>
+                <input type="checkbox" id="check"><span class="recuerda">Recuerdame</span>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+
+        function validar(){
+            
+            let usua=usuario.value;
+            let contra=password.value;
+
+            console.log("Usuario: "+usua);
+            console.log("contraseña: "+contra);
+            
+            let lengStr=contra.length;
+            if(lengStr<8){
+                alert("La contraseña tiene menos de 8 caracteres")
+            }
+
+
+            if (usua=="carlitos" && contra=="carlitos123") {
+                
+                location.href="home.html";
+                
+
+            }
+            else if(usua=="" || contra==""){
+                alert("Faltan credenciales");
+            }
+            else{
+                
+                error.innerText="Usuario o contraseña incorrectos"
+                setTimeout(function(){
+
+                error.innerText=""},2000)
+            }
+        }
+        function recordar(){
+            if(check.checked){
+                alert("Te recordaré")
+            }
+        }
+
+        let usuario=document.getElementById("usu");
+        let password=document.getElementById("contra");
+        let ingresar=document.getElementById("ingresar");
+        let check=document.getElementById("check");
+        let error=document.getElementById("error");
+
+        check.addEventListener("click",recordar);
+        password.addEventListener("mouseover",function(){
+            password.type="text";
+        });
+        password.addEventListener("mouseout",function(){
+            password.type="password";
+        });
+
+        ingresar.addEventListener("click", (e)=>{
+            e.preventDefault();
+            validar();
+        });
+    </script>
+</body>
+</html>

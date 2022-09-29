@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.698 2.799a2 2 0 012.604 0l6.336 5.43 2.487 1.99a1 1 0 11-1.25 1.562l-.875-.7V19a2 2 0 01-2 2h-4v-5a2 2 0 10-4 0v5H6a2 2 0 01-2-2v-7.92l-.875.7a1 1 0 11-1.25-1.56l2.487-1.99 6.336-5.431z" />
+                    </svg>
+                </a>
+            </li>
+            <li><a href="">Nosotros</a></li>
+            <li><a href="">Productos</a></li>
+        </ul>
+
+        <div>
+            <span>Usuario: Carlitos</span>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-door-open" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="log">
+                <path fill-rule="evenodd" d="M1 15.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM11.5 2H11V1h.5A1.5 1.5 0 0 1 13 2.5V15h-1V2.5a.5.5 0 0 0-.5-.5z"/>
+                <path fill-rule="evenodd" d="M10.828.122A.5.5 0 0 1 11 .5V15h-1V1.077l-6 .857V15H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117z"/>
+                <path d="M8 9c0 .552.224 1 .5 1s.5-.448.5-1-.224-1-.5-1-.5.448-.5 1z"/>
+            </svg>
+
+        </div>
+    </nav>
+
+    <div class="contenedor">
+        <section class="nosotros">
+            <div class="img-nosotros">
+                <img src="img/LIBRERIASESPA1206-superJumbo.jpg" alt="">
+            </div>
+            <div class="nosotros-parrafo">
+                <h2>Nosotros</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Molestias quae molestiae 
+                    iure vero, voluptatem quod aliquid quo exercitationem 
+                    eveniet explicabo necessitatibus harum amet 
+                    quaerat cumque vel, impedit qui repudiandae magnam.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Molestias quae molestiae 
+                    iure vero, voluptatem quod aliquid quo exercitationem 
+                    eveniet explicabo necessitatibus harum amet 
+                    quaerat cumque vel, impedit qui repudiandae magnam.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Molestias quae molestiae 
+                    iure vero, voluptatem quod aliquid quo exercitationem 
+                    eveniet explicabo necessitatibus harum amet 
+                    quaerat cumque vel, impedit qui repudiandae magnam.
+                    Lorem ipsum dolor sit, amet consectetur 
+                    adipisicing elit. Molestias quae molestiae 
+                    iure vero, voluptatem quod aliquid quo exercitationem 
+                    eveniet explicabo necessitatibus harum amet 
+                    quaerat cumque vel, impedit qui repudiandae magnam.
+                </p>
+            </div>
+        </section>
+        <section class="section-productos">
+            <div class="contenedor-lista">
+                <select name="Productos" id="list-pro">
+                    <option value="0">          </option>
+                    <option value="">Producto 1</option>
+                    <option value="">Producto 2</option>
+                    <option value="">Producto 3</option>
+                    <option value="">Producto 4</option>
+                </select>
+                <button id="pedir">Pedir</button>
+            </div>
+            <div class="contenedor-productos">
+                <h2>Productos</h2>
+                <div class="cards">
+                    <div  class="cards-productos">
+                        <img src="img/libro-imprenta-lima.jpg" alt="">
+                        <span class="span-producto">Producto 1</span>
+                    </div>
+    
+                    <div  class="cards-productos">
+                        <img src="img/media_10487a00f81e45735d68f68bc2739b65bb4997de1.png" alt="">
+                        <span class="span-producto">Producto 2</span>
+                    </div>
+    
+                    <div  class="cards-productos">
+                        <img src="img/media_18d86248e8c6c00f18e7461e58ee5291a8485f45f.png" alt="">
+                        <span class="span-producto">Producto 3</span>
+                    </div>
+    
+                    <div  class="cards-productos">
+                        <img src="img/Mejores-portadas-LosdiariosdeAdanyEva-Impedimenta-WMagazin-e1577840134869.jpg" alt="">
+                        <span class="span-producto">Producto 4</span>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>
+            Codex By Karl James Espíndola Sierra
+        </p>
+    </footer>
+    <div class="contenedor-modal ocultar" id="modal">
+        <div class="ventana-modal">
+            <span>INFORMACIÓN DEL PEDIDO</span>
+            <p class="Cpadre">
+                Producto selecionado:<br> 
+                <span id="padre"></span>
+            </p>
+            <div class="botones">
+                <button class="cancelar" id="cancelar">Cancelar</button>
+                <button class="aceptar" id="aceptar">Aceptar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
